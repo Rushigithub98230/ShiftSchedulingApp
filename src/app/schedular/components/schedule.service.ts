@@ -9,8 +9,8 @@ export class ScheduleService {
   private schedules: Schedule[] = [
     { shiftId: 1, startTime: '08:00', endTime: '16:00', employeeName: 'Alice Johnson', weekday: 'Monday' },
     { shiftId: 2, startTime: '20:00', endTime: '04:00', employeeName: 'Bob Smith', weekday: 'Monday' },
-    { shiftId: 1, startTime: '08:00', endTime: '16:00', employeeName: 'Charlie Brown', weekday: 'Tuesday' },
-    { shiftId: 2, startTime: '20:00', endTime: '04:00', employeeName: 'Diana Prince', weekday: 'Tuesday' },
+    // { shiftId: 1, startTime: '08:00', endTime: '16:00', employeeName: 'Charlie Brown', weekday: 'Tuesday' },
+    // { shiftId: 2, startTime: '20:00', endTime: '04:00', employeeName: 'Diana Prince', weekday: 'Tuesday' },
   ];
 
   private shifts = [

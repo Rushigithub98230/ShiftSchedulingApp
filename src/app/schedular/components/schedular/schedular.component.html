@@ -1,3 +1,14 @@
+<div class="month-navigation">
+  <button (click)="previousMonth()">Previous Month</button>
+  
+  <select (change)="onMonthChange($event)">
+    <option *ngFor="let month of months; let i = index" [value]="i" [selected]="i === currentMonthIndex">{{ month }}</option>
+  </select>
+  
+  <button (click)="nextMonth()">Next Month</button>
+</div>
+
+
 <div>
     <h2>Job Schedules</h2>
     <mwl-calendar-month-view

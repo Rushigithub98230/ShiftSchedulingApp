@@ -1,0 +1,30 @@
+<div>
+    <h2>Job Schedules</h2>
+    <mwl-calendar-month-view
+      [viewDate]="viewDate"
+      [events]="events">
+    </mwl-calendar-month-view>
+  </div>
+  
+  <div>
+    <h3>Create Schedule</h3>
+    <form >
+      <input #employeeName type="text" placeholder="Employee Name" required />
+      <input #startTime type="time" required />
+      <input #endTime type="time" required />
+      <select #shiftId required>
+        <option *ngFor="let shift of shifts" [value]="shift.id">{{ shift.name }}</option>
+      </select>
+      <select #weekday required>
+        <option>Sunday</option>
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+        <option>Saturday</option>
+      </select>
+      <button type="submit" (click)="onScheduleCreated(employeeName.value, startTime.value, endTime.value, shiftId.value, weekday.value); $event.preventDefault()">Create Schedule</button>
+    </form>
+  </div>
+  
